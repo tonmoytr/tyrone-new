@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HAPPY G's</title>
+
+    <!-- deploy -->
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .gallery-section {
+        padding: 50px;
+        /* background-color: #683d0d; */
+        text-align: center;
+      }
+
+      .gallery-section h2 {
+        font-family: "Arial", sans-serif;
+        color: #333;
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        /* Fixed height */
+        object-fit: cover;
+        /* Ensure images are cropped to fit */
+        object-position: center;
+        /* Center the image content */
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 1024px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-section {
+          padding: 20px;
+        }
+
+        .gallery-section h2 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+
+    <link rel="shortcut icon" href="./images/pic.jpg" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/pic.jpg" />
+    <link
+      rel="icon"
+      type="./images/pic.jpg"
+      sizes="32x32"
+      href="favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="./images/pic.jpg"
+      sizes="16x16"
+      href="favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/lightcase.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v7" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v6" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <script defer="defer" src="/static/js/main.b625277e.js"></script>
+    <link href="/static/css/main.3c1f13c5.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="preloader">
+      <img src="./images/logo-p.png" alt="landofmemes" width="256" />
+    </div>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <a class="navbar-brand" href="index.html"
+            ><img src="./images/logo-p.png" alt="" id="header-logo" /></a
+          ><button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler--icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+              <a class="nav-link" href="#about">About</a>
+              <!-- <a class="nav-link" href="#SWAP">SWAP</a> -->
+              <a class="nav-link" href="#tokenomics">Tokenomics</a>
+              <a class="nav-link" href="#roadmap">Roadmap</a>
+              <!-- <a class="nav-link text-warning" href=""
+                            target="_blank">Audit</a> -->
+            </div>
+            <div class="social-btns">
+              <a
+                target="_blank"
+                href="https://raydium.io/swap/?inputMint=sol&outputMint=6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump"
+                class="btn-new"
+                ><span>BUY NOW</span></a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section id="home" class="banner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 col-12">
+            <div class="banner__wrapper">
+              <div class="row g-5 align-items-center justify-content-center">
+                <div class="col">
+                  <div
+                    class="banner__content text-center justify-content-center"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
+                    <h1 class="text--3d text-uppercase">
+                      <span class="color--gradient-y">HAPPY G's</span>
+                    </h1>
+                    <p style="font-size: 32px" class="under_title">
+                      Where Retro G Meets Happy Legendary Charm!
+                    </p>
+                    <p style="color: #66aee6">
+                      Happy G's takes the crypto space to the next level. Get
+                      ready to pixel-pump your way to the moon with the ultimate
+                      meme icon!
+                    </p>
+                    <div class="editor-field editor-field__textbox">
+                      <div class="editor-field__label-container">
+                        <label class="editor-field__label"
+                          >CONTRACT ADDRESS</label
+                        >
+                      </div>
+                      <div class="editor-field__container">
+                        <input
+                          style="font-size: 72%"
+                          class="editor-field__input"
+                          onblur='removeNoise(this,"input")'
+                          value="6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump"
+                          readonly="readonly"
+                        />
+                      </div>
+                      <span class="editor-field__bottom"></span>
+                      <div class="editor-field__noise"></div>
+                    </div>
+                    <div
+                      class="mb-4 d-flex justify-content-center"
+                      id="first_buttons"
+                    >
+                      <a type="button" id="copyButton" class="btn-new"
+                        ><span>COPY ADDRESS</span></a
+                      >
+                    </div>
+                    <div
+                      class="mb-4 d-flex justify-content-center"
+                      id="first_buttons"
+                    >
+                      <a
+                        href="https://raydium.io/swap/?inputMint=sol&outputMint=6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump"
+                        type="button"
+                        id="buyOnPinksale"
+                        class="btn-new"
+                        ><span>BUY NOW</span></a
+                      >
+                    </div>
+                    <ul class="social justify-content-center">
+                      <li class="social__item">
+                        <a href="https://x.com/Happy_Gs_Solana" target="_blank" class="social__link"
+                          ><img
+                            src="assets/images/social/twitter.png"
+                            alt="Twitter"
+                            id="twitter"
+                        /></a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="https://t.me/happy_gs_sol"
+                          target="_blank"
+                          class="social__link"
+                          ><img
+                            src="assets/images/social/telegram.png"
+                            alt="Telegram"
+                            id="telegram"
+                        /></a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="https://raydium.io/swap/?inputMint=sol&outputMint=6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump"
+                          target="_blank"
+                          class="social__link"
+                          ><img
+                            src="images/logos/raydium.png"
+                            alt="dextools"
+                            id="twitter"
+                        /></a>
+                      </li>
+                      <!-- <li class="social__item"><a
+                                                href="https://birdeye.so/token/6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump?chain=solana"
+                                                target="_blank" class="social__link"><img src="images/logos/birdeye.png"
+                                                    alt="dextools" id="twitter"></a></li> -->
+                      <li class="social__item">
+                        <a href="https://www.dextools.io/app/en/solana/pair-explorer/CBsT1rwFJc5psNMM18DSCe7Dr4yG87FWNhQVkLNoPz8z?t=1731166820761" target="_blank" class="social__link"
+                          ><img
+                            src="images/logos/dextools.svg"
+                            alt="dextools"
+                            id="twitter"
+                        /></a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="https://dexscreener.com/solana/cbst1rwfjc5psnmm18dsce7dr4yg87fwnhqvklnopz8z"
+                          target="_blank"
+                          class="social__link"
+                          ><img
+                            src="images/logos/dexscreener.png"
+                            alt="dextools"
+                            id="twitter"
+                        /></a>
+                      </li>
+                      <!-- <li class="social__item"><a
+                                                href="https://www.dexview.com/solana/6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump"
+                                                target="_blank" class="social__link"><img
+                                                    src="images/logos/dex-view-logo.png" alt="dexview" id="twitter"></a>
+                                        </li>
+                                        <li class="social__item"><a
+                                                href="https://jup.ag/swap/6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump-SOL"
+                                                target="_blank" class="social__link"><img
+                                                    src="images/logos/jupiter-logo.svg" alt="dexview" id="twitter"></a>
+                                        </li>
+                                        <li class="social__item"><a
+                                                href="https://avedex.cc/token/6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump-solana?from=Default"
+                                                target="_blank" class="social__link"><img src="images/logos/avedex.png"
+                                                    alt="avedex" id="twitter"></a></li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="marquees-wrapper">
+      <div class="marquee marquee-2">
+        <ul class="marquee__content scroll">
+          <li>
+            <a href="" class="sponsor-urls" target="_blank"
+              ><span
+                ><img src="images/logos/solana.png" alt="" width="29" /></span
+              >Solana chain</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://raydium.io/swap/?inputMint=sol&outputMint=6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump"
+              class="sponsor-urls"
+              target="_blank"
+              ><span
+                ><img src="images/logos/raydium.png" alt="" width="29" /></span
+              >raydium</a
+            >
+          </li>
+
+          <li>
+            <a href="https://www.dextools.io/app/en/solana/pair-explorer/CBsT1rwFJc5psNMM18DSCe7Dr4yG87FWNhQVkLNoPz8z?t=1731166820761" class="sponsor-urls" target="_blank"
+              ><span
+                ><img src="images/logos/dextools.svg" alt="" width="29" /></span
+              >dextools</a
+            >
+          </li>
+
+          <li>
+            <a href="https://dexscreener.com/solana/cbst1rwfjc5psnmm18dsce7dr4yg87fwnhqvklnopz8z" class="sponsor-urls" target="_blank"
+              ><span
+                ><img
+                  src="images/logos/dexscreener.png"
+                  alt=""
+                  width="29" /></span
+              >dexscreener</a
+            >
+          </li>
+        </ul>
+        <ul class="marquee__content scroll" aria-hidden="true">
+          <li>
+            <a href="" class="sponsor-urls" target="_blank"
+              ><span
+                ><img src="images/logos/solana.png" alt="" width="29" /></span
+              >Solana chain</a
+            >
+          </li>
+          <li>&#183;</li>
+
+          <li>&#183;</li>
+          <li>
+            <a
+              href="https://raydium.io/swap/?inputMint=sol&outputMint=6K1MGhYjMfHQLTPpWPpGWhRmNAVmNVN8jUnRf7DUpump"
+              class="sponsor-urls"
+              target="_blank"
+              ><span
+                ><img src="images/logos/raydium.png" alt="" width="29" /></span
+              >raydium</a
+            >
+          </li>
+          <li>&#183;</li>
+
+          <li>&#183;</li>
+          <li>
+            <a href="https://www.dextools.io/app/en/solana/pair-explorer/CBsT1rwFJc5psNMM18DSCe7Dr4yG87FWNhQVkLNoPz8z?t=1731166820761" class="sponsor-urls" target="_blank"
+              ><span
+                ><img src="images/logos/dextools.svg" alt="" width="29" /></span
+              >dextools</a
+            >
+          </li>
+          <li>&#183;</li>
+
+          <li>&#183;</li>
+          <li>
+            <a href="https://dexscreener.com/solana/cbst1rwfjc5psnmm18dsce7dr4yg87fwnhqvklnopz8z" class="sponsor-urls" target="_blank"
+              ><span
+                ><img
+                  src="images/logos/dexscreener.png"
+                  alt=""
+                  width="29" /></span
+              >dexscreener</a
+            >
+          </li>
+          <li>&#183;</li>
+        </ul>
+      </div>
+    </section>
+    <section class="about-area padding-top" id="about">
+      <div class="container">
+        <div class="row" id="whats_the_mechanism_row">
+          <div class="col-lg-12 col-12">
+            <div class="section-header">
+              <div class="section-header__content">
+                <h3 class="color--gradient-y">ABOUT Happy G's</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div
+              class="about-card mb-5 position-relative"
+              id="about_card_4"
+              style="padding-top: 3%; margin-bottom: 0 !important"
+            >
+              <p id="contract_mechanism_p" style="text-align: center">
+                Happy G's brings the nostalgic magic of pixel art into the world
+                of Doge memes. <br />
+                <br />
+                A perfect blend of retro vibes and meme culture, Happy G's is
+                here to pixelate the future of fun in the crypto space! <br />
+                <br />
+                Ready to explore the ultimate pixel paradise? Join the pack
+                <br />
+                <br />
+                Happy G's is where the magic of pixel art meets the unstoppable
+                force of Doge memes, creating a one-of-a-kind fusion of retro
+                and modern crypto culture. With its nostalgic 8-bit aesthetic
+                <br />
+                <br />
+                Happy G's taps into the beloved era of pixelated games, bringing
+                those vibes to the forefront of the crypto scene.
+              </p>
+              <br />
+
+              <div class="about-btn"><span>⚜️</span></div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12">
+            <div class="section-header" style="margin-top: 5%">
+              <div class="section-header__content">
+                <img
+                  style="border-radius: 2rem; width: 460px"
+                  src="./images/meme-w.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tokenomics-area" id="tokenomics">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="section-header__content">
+                <h2 class="color--gradient-y">Tokenomics</h2>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-12">
+                    <div class="section-header">
+                        <div class="section-header__content">
+                            <h4 class="text-center" id="contract_mechanism_title">No Private Sale, No Reserved Tokens -
+                                A Community-Driven Rise!</h4>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-5 col-12">
+            <div class="tokenomics-info">
+              <ul>
+                <li id="tokenomics-li">
+                  <div>
+                    NAME: <span class="text-warning">Happy G's</span><br />
+                  </div>
+                  <hr />
+                  <div>
+                    SYMBOL: <span class="text-warning">$G</span><br />
+                  </div>
+                  <hr />
+                  <div>
+                    SUPPLY: <span class="text-warning">1,000,000,000</span
+                    ><br />
+                  </div>
+                  <hr />
+                  <div>LP: <span class="text-danger">BURNT</span><br /></div>
+                  <hr />
+                  <div>TAX: <span class="text-info">0%</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-7 col-12">
+            <div class="tokenomics-media ps-4 text-center">
+              <img src="./images/pic.png" alt="" id="tokenomics-logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="roadmap-area padding-bottom"
+      id="roadmap"
+      style="margin-top: 5%"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="section-header__content">
+                <h2 class="color--gradient-y">Roadmap</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-12">
+            <div class="roadmap-card h-100">
+              <h4>Phase 1</h4>
+              <ul>
+                <li><i class="fa fa-arrow-right"></i> Happy G's Launch</li>
+                <li><i class="fa fa-arrow-right"></i> Community Building</li>
+                <li>
+                  <i class="fa fa-arrow-right"></i> DexTools, DexScreener
+                  Trending
+                </li>
+                <li style="color: #fff">
+                  <i class="fa fa-arrow-right"></i> 500 Strong Holder
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-12 roadmap-1">
+            <div class="roadmap-card h-100">
+              <h4>Phase 2</h4>
+              <ul>
+                <!-- <li><i class="fa fa-arrow-right"></i> CoinGecko and Coinmarketcap Listings</li> -->
+                <li><i class="fa fa-arrow-right"></i> Post-Launch marketing</li>
+                <li><i class="fa fa-arrow-right"></i> 1,000 Holders</li>
+                <li style="color: #fff">
+                  <i class="fa fa-arrow-right"></i> Support MEME Culture
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-12 roadmap-2">
+            <div class="roadmap-card h-100">
+              <h4>Phase 3</h4>
+              <ul>
+                <li><i class="fa fa-arrow-right"></i> 10,000 Holders</li>
+                <li style="color: #fff">
+                  <i class="fa fa-arrow-right"></i> More Plans Incoming
+                </li>
+                <li>
+                  <i class="fa fa-arrow-right"></i> Let's see what's next?
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section>
+      <div class="gallery-section">
+        <div class="section-header">
+          <div class="section-header__content">
+            <h2 class="color--gradient-y">Roadmap</h2>
+          </div>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="./images/meme-10.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/meme2.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/meme3.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/meme4.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/meme5.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/meme6.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/meme7.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/meme8.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="./images/meme-9.jpg" alt="Image 1" />
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <footer class="footer">
+      <div class="footer__wrapper padding-top padding-bottom">
+        <div class="container">
+          <div class="footer__content text-center t">
+            <h2 class="color--gradient-y">Follow Us!</h2>
+            <p>
+              Stay Connected for the latest updates, news, and exciting
+              developments in the Land of Memes.
+            </p>
+            <!-- <p><a href="https://github.com/landofmemes" target="_blank" class="social__link">GitHub</a> | <a
+                            href="https://medium.com/@landofmemes" target="_blank" class="social__link">Medium</a>
+                    </p> -->
+            <ul class="social justify-content-center">
+              <li class="social__item">
+                <a href="https://x.com/Happy_Gs_Solana" target="_blank" class="social__link"
+                  ><img
+                    src="assets/images/social/twitter.png"
+                    alt="Twitter"
+                    id="twitterFooter"
+                /></a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="https://t.me/happy_gs_sol"
+                  target="_blank"
+                  class="social__link"
+                  ><img
+                    src="assets/images/social/telegram.png"
+                    alt="Telegram"
+                    id="telegramFooter"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/lightcase.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script>
+      const removeNoise = (
+          { offsetParent: { offsetParent: t }, lastElementChild: e },
+          r
+        ) => {
+          let o;
+          "input" == r
+            ? ((o = t.lastElementChild), t.classList.remove("is-focused"))
+            : (o = e),
+            o.removeChild(o.childNodes[0]);
+        },
+        createSvg = (t) => {
+          let e = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+          e.setAttribute("x", t.svgGroupX), e.setAttribute("y", t.svgGroupY);
+          let r = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "rect"
+          );
+          r.setAttribute("x", t.rectX),
+            r.setAttribute("y", t.rectY),
+            r.setAttribute("width", t.noiseWidth),
+            r.setAttribute("height", t.noiseHeight),
+            r.setAttribute("class", "noise__el"),
+            e.appendChild(r);
+          let o = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "rect"
+          );
+          o.setAttribute("x", t.rectBorderX),
+            o.setAttribute("y", t.rectBorderY),
+            o.setAttribute("width", t.noiseWidth),
+            o.setAttribute("height", t.noiseHeight),
+            o.setAttribute("fill", "rgb(15, 16, 32)"),
+            e.appendChild(o);
+          let i = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "animate"
+          );
+          return (
+            i.setAttribute("attributeType", "CSS"),
+            i.setAttribute("attributeName", "opacity"),
+            i.setAttribute("id", t.id),
+            i.setAttribute("from", "0"),
+            i.setAttribute("to", "1"),
+            i.setAttribute("dur", `${Math.random() + 0.1}s`),
+            i.setAttribute("repeatCount", "indefinite"),
+            i.setAttribute(
+              "begin",
+              `${Math.random() + 0.1}s;${t.id}.end+${Math.random() + 0.1}s`
+            ),
+            e.appendChild(i),
+            e
+          );
+        },
+        generateNoise = (t, e) => {
+          const r = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "svg"
+          );
+          let o, i, a;
+          "input" == e
+            ? ((o = t.offsetParent),
+              t.parentElement.parentElement.classList.add("is-focused"),
+              (i = t.parentElement.parentElement.lastElementChild),
+              (a = "rgb(112, 113, 156)"))
+            : ((o = t), (i = t.lastElementChild), (a = "rgb(73, 77, 195)"));
+          let n = o.offsetHeight,
+            d = o.offsetWidth;
+          r.setAttribute("width", "300"), r.setAttribute("height", "66");
+          let s = Math.round(d / n),
+            h = Math.round(n / 10 / 2),
+            l = Math.floor(Math.random() * (s - 1) + 1),
+            u = {
+              inputWidth: d,
+              noiseHeight: 2,
+              rectX: "4",
+              rectBorderX: "4",
+              rectBorderY: "14",
+              noiseColor: a,
+            },
+            c = {
+              inputWidth: d,
+              maxNoiseWidth: 8,
+              minNoiseWidth: 2,
+              noiseWidth: 2,
+              rectBorderY: 14,
+              noiseColor: a,
+            };
+          for (let t = 0; t <= l; t++)
+            r.appendChild(
+              createSvg({
+                ...u,
+                noiseWidth: Math.floor(12 * Math.random() + 4),
+                svgGroupX: Math.floor(Math.random() * (d - 1) + 1),
+                rectY: Math.floor(8 * Math.random() + 8),
+                svgGroupY: 46,
+                id: `bottom${t}`,
+              })
+            );
+          let m = Math.floor(Math.random() * (s - 1) + 1);
+          for (let t = 0; t <= m; t++)
+            r.appendChild(
+              createSvg({
+                ...u,
+                noiseWidth: Math.floor(12 * Math.random() + 4),
+                svgGroupX: Math.floor(Math.random() * (d - 1) + 1),
+                rectY: Math.floor(12 * Math.random() + 8),
+                svgGroupY: 0,
+                id: `top${t}`,
+              })
+            );
+          for (let t = 0; t <= h; t++)
+            r.appendChild(
+              createSvg({
+                ...c,
+                noiseHeight: Math.floor(6 * Math.random() + 2),
+                rectX: "2",
+                rectY: Math.floor(8 * Math.random() + 12),
+                svgGroupX: 0,
+                svgGroupY: Math.floor(19 * Math.random() + 1),
+                id: `left${t}`,
+                rectBorderX: 0,
+              })
+            );
+          for (let t = 0; t <= h; t++)
+            r.appendChild(
+              createSvg({
+                ...c,
+                noiseHeight: Math.floor(6 * Math.random() + 2),
+                rectX: "0",
+                rectY: Math.floor(8 * Math.random() + 12),
+                svgGroupX: d - 4,
+                svgGroupY: Math.floor(15 * Math.random() + 5),
+                id: `right${t}`,
+                rectBorderX: 2,
+              })
+            );
+          i.appendChild(r);
+        },
+        initNoise = () => {
+          document.querySelectorAll(".editor-field__input").forEach((t) => {
+            generateNoise(t, "input");
+          });
+        };
+      window.onload = initNoise;
+    </script>
+    <script>
+      const copyInputValue = () => {
+        const t = document.querySelector(".editor-field__input"),
+          e = t.value || t.placeholder;
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            Toastify({
+              text: "Contract address is copied to clipboard",
+              className: "info",
+              position: "center",
+              style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+              },
+            }).showToast(),
+              t.setAttribute("readonly", "readonly");
+          })
+          .catch((t) => {
+            console.error("Failed to copy text: ", t);
+          });
+      };
+      document
+        .getElementById("copyButton")
+        .addEventListener("click", copyInputValue);
+    </script>
+  </body>
+</html>
